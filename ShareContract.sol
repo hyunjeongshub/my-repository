@@ -243,6 +243,8 @@ contract ShareContract {
     **          만약 투표자가 4명이 안될경우 3일 지나면 자동 voteResult 실행.
     */
     function voting(bool election) public {
+        //createVote가 실행될 때만 가능한 require 고민해보기
+        //한명이 여러번 투표 방지 고민해보기
         if(election == false){
             cons++;
         }
@@ -268,5 +270,3 @@ contract ShareContract {
             canRefund = true;
         }
     }
-}
-//
